@@ -1,0 +1,9 @@
+data_paths:
+  raw_data_path : ./artifacts/data/raw_data/
+  cleaned_data_path : ./artifacts/data/cleaned_data/
+  raw_data_file : homeprices.csv
+  processed_data_path : ./artifacts/data/processed_data/
+
+preprocess:
+  test_size : 0.3
+  Target : price
