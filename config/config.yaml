@@ -3,6 +3,10 @@ data_paths:
   cleaned_data_path : ./artifacts/data/cleaned_data/
   raw_data_file : homeprices.csv
   processed_data_path : ./artifacts/data/processed_data/
+  model_path : ./artifacts/model/raw_model/
+
+model :
+  fit_intercept : True
 
 preprocess:
   test_size : 0.3
