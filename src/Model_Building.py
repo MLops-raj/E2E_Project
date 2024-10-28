@@ -6,7 +6,7 @@ import pickle
 #import mlflow
 from sklearn.linear_model import LinearRegression
 
-with open("./config/config.yaml","r") as file:
+with open("./../config/config.yaml","r") as file:
     config =  yaml.safe_load(file)
 
 processed_data_path = config['data_paths']['processed_data_path']

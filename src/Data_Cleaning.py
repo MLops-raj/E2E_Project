@@ -3,7 +3,7 @@ import os
 import argparse
 import yaml
 
-with open("./config/config.yaml","r") as file:
+with open("./../config/config.yaml","r") as file:
     config =  yaml.safe_load(file)
 
 raw_data_path = config['data_paths']['raw_data_path']

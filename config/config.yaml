@@ -1,9 +1,9 @@
 data_paths:
-  raw_data_path : ./artifacts/data/raw_data/
-  cleaned_data_path : ./artifacts/data/cleaned_data/
+  raw_data_path : ./../artifacts/data/raw_data/
+  cleaned_data_path : ./../artifacts/data/cleaned_data/
   raw_data_file : homeprices.csv
-  processed_data_path : ./artifacts/data/processed_data/
-  model_path : ./artifacts/model/raw_model/
+  processed_data_path : ./../artifacts/data/processed_data/
+  model_path : ./../artifacts/model/raw_model/
 
 model :
   fit_intercept : True
@@ -11,3 +11,7 @@ model :
 preprocess:
   test_size : 0.3
   Target : price
+
+mlflow:
+  experiment_name: test
+  run_name: first_model_e2e

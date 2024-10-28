@@ -5,7 +5,7 @@ import yaml
 #import mlflow
 from sklearn.model_selection import train_test_split
 
-with open("./config/config.yaml","r") as file:
+with open("./../config/config.yaml","r") as file:
     config =  yaml.safe_load(file)
 
 test_size = config['preprocess']['test_size']
