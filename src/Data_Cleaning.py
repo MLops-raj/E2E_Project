@@ -2,6 +2,7 @@ import pandas as pd
 import os
 import argparse
 import yaml
+import mlflow
 
 with open("./../config/config.yaml","r") as file:
     config =  yaml.safe_load(file)
@@ -19,6 +20,7 @@ def data_cleaning(raw_data_path,cleaned_data_path,raw_data_file):
 
     cleaned_data_file = os.path.join(cleaned_data_path,raw_data_file)
     df.to_csv(cleaned_data_file,index=False)
+    mlflow.log_param("cleaned_data_path",clean_data_file)
     print("################DATA CLEANING FINISHED##################")
 
 if __name__ == "__main__":
