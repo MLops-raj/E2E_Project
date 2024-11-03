@@ -20,7 +20,8 @@ def data_cleaning(raw_data_path,cleaned_data_path,raw_data_file):
 
     cleaned_data_file = os.path.join(cleaned_data_path,raw_data_file)
     df.to_csv(cleaned_data_file,index=False)
-    mlflow.log_param("cleaned_data_path",clean_data_file)
+    mlflow.log_param("cleaned_data_path",cleaned_data_file)
+    
     print("################DATA CLEANING FINISHED##################")
 
 if __name__ == "__main__":

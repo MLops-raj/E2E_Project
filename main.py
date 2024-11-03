@@ -16,13 +16,13 @@ os.environ['MLFLOW_TRACKING_PASSWORD'] = secrets['mlflow']['MLFLOW_TRACKING_PASS
 
 run_name = config['mlflow']['run_name']
 
-def main(run_name):
+def main(run_name=run_name):
     print("[info] Mlops pipeline triggered")
     with mlflow.start_run(run_name=run_name):
          mlflow.run("./src",entry_point="Data_Cleaning.py",env_manager="local",run_name="Data_Cleaning")
          mlflow.run("./src",entry_point="Data_Preprocessing.py",env_manager="local",run_name="Data_Preprocessing")
          mlflow.run("./src",entry_point="Model_Building.py",env_manager="local",run_name="Model_Building")
-
+         mlflow.run("./src",entry_point="Model_Evaluation.py",env_manager="local",run_name="Model_Evaluation")
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--run_name",type=str, default=run_name)
